@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 import Header from './components/Header';
 import ListItem from './components/ListItem';
 import AddItem from './components/AddItem';
+import EmptyItemBanner from './components/EmptyItemBanner';
 import { v4 as uuidv4 } from "uuid";
 
 const App = () => {
@@ -36,6 +37,10 @@ const App = () => {
         data={items}
         renderItem={({item}) => <ListItem item={item} deleteItem={deleteItem}/> }
       />
+
+      { items.length == 0 &&
+        <EmptyItemBanner />
+      }
     </View>
   )
 }

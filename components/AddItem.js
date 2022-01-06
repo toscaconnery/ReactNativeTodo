@@ -27,6 +27,12 @@ const styles = StyleSheet.create({
         height:60,
         padding:8,
         fontSize:16,
+        // backgroundColor:'#fed54b',
+        padding:20,
+        margin:5,
+        borderRadius:8,
+        borderColor:'#fed54b',
+        borderWidth:1,
     },
     btn: {
         backgroundColor:'#eeb609',
