@@ -7,14 +7,20 @@ const AddItem = ({addItem}) => {
 
     const onChange = (textValue) => setText(textValue)
 
+    const processItem = (text) => {
+        addItem(text)
+        setText('')
+    }
+
     return (
         <View>
             <TextInput 
                 placeholder='Add item'
                 style={styles.input}
+                value={text}
                 onChangeText={onChange}
             />
-            <TouchableOpacity style={styles.btn} onPress={() => addItem(text)}>
+            <TouchableOpacity style={styles.btn} onPress={() => processItem(text)}>
                 <Text style={styles.btnText}> <Icon name='plus' size={20}/> Add Item</Text>
                 
             </TouchableOpacity>
