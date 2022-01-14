@@ -1,8 +1,9 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
-import Home from '../pages/home';
-import ToDo from '../pages/todo';
-import About from '../pages/about';
+import Home from '../pages/Home';
+import ToDo from '../pages/ToDo';
+import About from '../pages/About';
+import RandomRestaurant from '../pages/RandomRestaurant';
 
 const screens = {
     Home: {
@@ -13,6 +14,9 @@ const screens = {
     },
     About: {
         screen: About
+    },
+    RandomRestaurant: {
+        screen: RandomRestaurant
     },
 }
 

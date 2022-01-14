@@ -10,13 +10,20 @@ const Home = ({navigation}) => {
         navigation.navigate('About')
     }
 
+    const goToRandomRestaurant = () => {
+        navigation.navigate('RandomRestaurant')
+    }
+
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.navButton} onPress={goToToDo}>
-                <Text style={styles.navButtonText}>Go to ToDo</Text>
+                <Text style={styles.navButtonText}>To Do</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.navButton} onPress={goToRandomRestaurant}>
+                <Text style={styles.navButtonText}>Random Restaurant</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.navButton} onPress={goToAbout}>
-                <Text style={styles.navButtonText}>Go to About</Text>
+                <Text style={styles.navButtonText}>About</Text>
             </TouchableOpacity>
         </View>
     )
